@@ -232,53 +232,6 @@
   width: 100%;
 }
 
-.img-holder{
-  aspect-ratio: var(--width) / var(--height);
-  background-color: lightgray;
-  overflow: hidden;
-}
-
-.img-cover{
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.has-scrollbar{
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  overflow: auto;
-  scroll-snap-type: inline mandatory;
-  padding-block-end: 20px;
-}
-
-.scrollbar-item{
-  min-width: 100%;
-  scroll-snap-align: start;
-}
-
-.has-scrollbar::-webkit-scrollbar{
-  height: 16px;
-}
-
-.has-scrollbar::-webkit-scrollbar-track{
-  background-color: yellow;
-  border-radius: 20px;
-}
-
-.has-scrollbar::-webkit-scrollbar-thumb{
-  background-color: var(--cor-3);
-  border-radius: 20px;
-  border: 3px solid yellow;
-}
-
-.has-scrollbar::-webkit-scrollbar-button{
-  width: 15%;
-}
-
-
-
 /*-----------------------------------*\
   #HEADER
 \*-----------------------------------*/
@@ -320,7 +273,7 @@
 
 .nav-toggle-btn.active .icon-2{
   opacity: 0;
-  transform: translate(-10px);
+  transform: translateX(-10px)
 }
 
 .nav-toggle-btn.active .icon-1{
@@ -488,38 +441,6 @@
 /*-----------------------------------*\
   #WORK
 \*-----------------------------------*/
-
-.work .container{
-  padding-inline: 0;
-}
-
-.work .section-title{
-  margin-block-end: 24px;
-}
-
-.work-card{
-  position: relative;
-}
-
-.work-card .card-content{
-  background-color: var(--cor-5);
-  max-width: 90%;
-  padding: 30px 10px;
-  margin-block-start: -60%;
-  margin-inline: auto;
-  position: relative;
-  text-align: center;
-  box-shadow: var(--shadow);
-}
-
-.work-card .card-subtitle{
-  font-family: var(--ff-chakra-petch);
-  text-transform: uppercase;
-  color: var(--cor-3);
-  font-weight: var(--fw-700);
-
-}
-
 
 
 
