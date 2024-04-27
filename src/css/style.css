@@ -140,13 +140,144 @@
   margin-block-end: -2px;
 }
 
-.section-subtitle\:dark{
+.section-subtitle.\:dark{
   color: var(--cor-5);
 }
 
-.section-subtitle\:dark::before{
-  
+.section-subtitle.\:dark::before{}
+
+.section-title{
+  text-align: center;
 }
+
+.h1,
+.h2,
+.h3,
+.display-1{
+  font-family: var(--ff-chakra-petch);
+  font-weight: var(--fw-700);
+  text-transform: uppercase;
+}
+
+.display-1{
+  font-size: var(--fs-1);
+}
+
+.h1{
+  color: var(--cor-5);
+  font-size: var(--fs-2);
+  line-height: 1.1;
+  letter-spacing: 1px;
+}
+
+.h2,
+.h3{
+  color: var(--cor-2);
+  font-weight: var(--fw-600);
+  line-height: 1.2;
+}
+
+.h2{
+  font-size: var(--fs-3);
+}
+
+.h3{
+  font-size: var(--fs-4);
+}
+
+.btn{
+  background-color: var(--cor-3);
+  color: var(--cor-1);
+  max-width: max-content;
+  font-family: var(--ff-chakra-petch);
+  font-weight: var(--fw-600);
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border: 1px solid transparent;
+  border-radius: var(--radius-pill);
+  transition: var(--transition);
+  will-change: tranform;
+}
+
+.btn:is(:hover, :focus-visible){
+  transform: translate(-5px);
+  background-color: var(--cor-4);
+  border-color: var(--cor-5);
+}
+
+.move-anim{
+  animation: moving 2s ease-in-out infinite alternate;
+}
+
+@keyframes moving{
+  0% {transform: translateY(0);}
+  100% {transform: translateY(10px);}
+}
+
+.section{
+  padding-block: var(--section-padding);
+}
+
+.btn-link{
+  font-family: var(--ff-chakra-petch);
+  text-transform: uppercase;
+  color: var(--cor-3);
+  font-weight: var(--fw-700);
+}
+
+.w-100{
+  width: 100%;
+}
+
+.img-holder{
+  aspect-ratio: var(--width) / var(--height);
+  background-color: lightgray;
+  overflow: hidden;
+}
+
+.img-cover{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.has-scrollbar{
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  overflow: auto;
+  scroll-snap-type: inline mandatory;
+  padding-block-end: 20px;
+}
+
+.scrollbar-item{
+  min-width: 100%;
+  scroll-snap-align: start;
+}
+
+.has-scrollbar::-webkit-scrollbar{
+  height: 16px;
+}
+
+.has-scrollbar::-webkit-scrollbar-track{
+  background-color: yellow;
+  border-radius: 20px;
+}
+
+.has-scrollbar::-webkit-scrollbar-thumb{
+  background-color: var(--cor-3);
+  border-radius: 20px;
+  border: 3px solid yellow;
+}
+
+.has-scrollbar::-webkit-scrollbar-button{
+  width: 15%;
+}
+
+
 
 /*-----------------------------------*\
   #HEADER
@@ -252,31 +383,142 @@
   gap: 30px;
 }
 
+.hero .section-subtitle{
+  text-transform: unset;
+}
 
+.hero .section-text{
+  color: var(--cor-5);
+  margin-block: 14px 18px;
+}
 
+.hero .btn{
+  margin-inline: auto;
+}
 
+.hero-banner{
+  aspect-ratio: var(--width) / var(--height);
+}
 
-
+.hero-banner img{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 90%;
+  z-index: -1;
+}
 
 /*-----------------------------------*\
   #SERVICE
 \*-----------------------------------*/
 
+.service-banner{
+  display: none;
+}
 
+.service{
+  text-align: center;
+}
 
+.service-list{
+  gap: 0;
+  margin-block-end: 40px;
+}
 
+.service-card .card-icon{
+  max-width: max-content;
+  margin-inline: auto;
+  margin-block-end: 24px;
+}
+
+.service-card .card-text{
+  line-height: 1.2;
+  margin-block: 8px;
+}
+
+.service .btn{
+  margin-inline: auto;
+}
 
 /*-----------------------------------*\
   #ABOUT
 \*-----------------------------------*/
 
+.about{
+  background-color: var(--cor-2);
+  color: var(--cor-5);
+  text-align: center;
+}
 
+.about .container{
+  display: grid;
+  gap: 50px;
+}
 
+.about .section-title{
+  color: var(--cor-5);
+}
 
+.about .section-text:nth-child(3){
+  margin-block: 12px 8px;
+}
+
+.about-list{
+  display: grid;
+  gap: 25px;
+  margin-block-start: 25px;
+}
+
+.about-item{
+  background-color: #000000;
+  padding: 40px 20px;
+  transition: var(--transition);
+}
+
+.about-item:hover{
+  background-color: var(--cor-4);
+  transform: translateY(-8px);
+}
+
+.about-item .strong{
+  display: block;
+  line-height: 1.1;
+}
 
 /*-----------------------------------*\
   #WORK
 \*-----------------------------------*/
+
+.work .container{
+  padding-inline: 0;
+}
+
+.work .section-title{
+  margin-block-end: 24px;
+}
+
+.work-card{
+  position: relative;
+}
+
+.work-card .card-content{
+  background-color: var(--cor-5);
+  max-width: 90%;
+  padding: 30px 10px;
+  margin-block-start: -60%;
+  margin-inline: auto;
+  position: relative;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+.work-card .card-subtitle{
+  font-family: var(--ff-chakra-petch);
+  text-transform: uppercase;
+  color: var(--cor-3);
+  font-weight: var(--fw-700);
+
+}
 
 
 
