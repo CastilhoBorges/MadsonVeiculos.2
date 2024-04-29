@@ -119,6 +119,9 @@
 }
 
 .has-bg-image{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right center;
   background-color: var(--cor-2);
 }
 
@@ -341,7 +344,7 @@
 }
 
 .hero .section-text{
-  color: var(--cor-5);
+  color: var(--cor-);
   margin-block: 14px 18px;
 }
 
@@ -439,20 +442,367 @@
 }
 
 /*-----------------------------------*\
-  #WORK
-\*-----------------------------------*/
-
-
-
-
-/*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
 
+.footer{
+  color: var(--cor-5);
+}
 
+.footer .shape{
+  display: none;
+}
 
+.footer-top{
+  background-color: var(--cor-2);
+}
 
+.footer-top .container{
+  display: grid;
+  gap: 40px;
+}
+
+.footer-text{
+  margin-block: 18px 20px;
+}
+
+.social-list{
+  display: flex;
+  gap: 8px;
+}
+
+.social-link{
+  background-color: var(--cor-1);
+  padding: 14px;
+  border-radius: var(--radius-circle);
+  transition: var(--transition);
+}
+
+.social-link:is(:hover, :focus-visible){
+  background-color: var(--cor-4);
+  transform: translateY(-5px);
+}
+
+.footer .h3{
+  color: var(--cor-5);
+  margin-block-end: 18px;
+}
+
+.footer-list .p{
+  color: var(--cor-5);
+  font-weight: var(--fw-400);
+  margin-block-end: 7px;
+}
+
+.footer-list li:not(:first-child){
+  margin-block-start: 16px;
+}
+
+.footer-link{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-link:is(:hover, :focus-visible){
+  color: var(--cor-3);
+}
+
+.footer-link .material-symbols-rounded{
+  flex-shrink: 0;
+  font-size: 1.8rem;
+  color: #FECB00;
+}
+
+.footer-bottom{
+  background-color: var(--cor-2);
+  padding-block: 20px;
+}
+
+.copyright{
+  text-align: center;
+  font-size: var(--fs-6);
+}
 
 /*-----------------------------------*\
   #MEDIA QUERIES
 \*-----------------------------------*/
+
+@media (min-width: 575px){
+  .container{
+    max-width: 540px;
+    width: 100%;
+    margin-inline: auto;
+  }
+
+  .section-subtitle{
+    font-size: 1.6rem;
+  }
+
+  .h2{
+    font-weight: var(--fw-700);
+  }
+
+  .hero{
+    height: 600px;
+  }
+
+  .hero .container{
+    max-width: unset;
+  }
+
+  .hero-content{
+    max-width: 520px;
+    margin-inline: auto;
+  }
+
+  .hero .section-text{
+    font-size: 1.8rem;
+  }
+
+  .service .section-title{
+    margin-block-end: 30px;
+  }
+
+  .service-list{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-block-end: 40px;
+  }
+
+  .about-list{
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+
+  .about-item{
+    padding-block: 20px;
+  }
+
+  .footer-top{
+    position: relative;
+    overflow: hidden;
+  }
+
+  .footer-top .container{
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer .shape-3{
+    display: block;
+    position: absolute;
+    bottom: -30px;
+    right: 0;
+  }
+
+}
+
+@media (min-width: 768px){
+  .container,
+  .hero-content{
+    max-width: 720px;
+  }
+
+  .btn{
+    padding: 16px 32px;
+  }
+
+  .section-subtitle{
+    font-size: 1.8rem;
+  }
+
+  .section-title:not(.h1){
+    max-width: 500px;
+    margin-inline: auto;
+  }
+
+  .hero{
+    height: 720px;
+    padding: 120px;
+  }
+
+  .hero .section-text{
+    margin-block-end: 30px;
+  }
+
+  .service-banner{
+    display: block;
+    position: relative;
+  }
+
+  .service-list{
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .service-banner img{
+    position: absolute;
+    top: 0;
+    left: -25%;
+    margin-inline-start: 15%;
+    width: 150%;
+    transform-origin: top;
+  }
+
+  .about-banner{
+    max-width: max-content;
+  }
+
+  .about-banner,
+  .about .section-text{
+    margin-inline: auto;
+  }
+
+  .about .section-text{
+    max-width: 520px;
+  }
+
+  .footer-top .container{
+    grid-template-columns: 1fr 0.9fr 0.9fr;
+  }
+
+  .copyright{
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 992px){
+  .container{
+    max-width: 960px;
+  }
+
+  .section-text,
+  .card-text{
+    font-size: 1.8rem;
+  }
+
+  .nav-toggle-btn{
+    display: none;
+  }
+
+  .header .container{
+    gap: 30px;
+  }
+
+  .navbar,
+  .navbar.active{
+    all: unset;
+    display: block;
+    margin-inline: auto;
+  }
+
+  .navbar-list{
+    display: flex;
+  }
+
+  .navbar-link{
+    position: relative;
+    font-size: unset;
+  }
+
+  .navbar-link:is(:hover, :focus-visible){
+    background: none;
+    color: var(--cor-4);
+  }
+
+  .header .btn{
+    display: flex;
+    padding: 12px 24px;
+    font-size: var(--fs-5);
+  }
+
+  .hero{
+    text-align: left;
+    padding-block-end: 80px; 
+  }
+
+  .hero .container{
+    max-width: 960px;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero :is(.section-subtitle, .btn){
+    margin-inline: 0;
+  }
+
+  .hero .section-title{
+    text-align: left;
+  }
+
+  .hero-banner img{
+    width: 55%;
+  }
+
+  .service-card .card-text{
+    padding-inline: 25px;
+    line-height: 1.45;
+    margin-block-end: 15px;
+  }
+
+  .service-list li:nth-child(-2n+3){
+    margin-block-start: 90px;
+  }
+
+  .service-list li:nth-child(4){
+    margin-inline-end: 60px;
+  }
+
+  .service-list li:nth-child(6){
+    margin-block-start: 60px;
+  }
+
+  .service-banner img{
+    left: -55%;
+    margin-block-start: -30%;
+    width: 190%;
+  }
+
+  .about{
+    position: relative;
+    z-index: 1;
+  }
+
+  .about,
+  .about .section-title{
+    text-align: left;
+  }
+
+  .about .container{
+    grid-template-columns: 1fr 0.75fr;
+    gap: 30px;
+  }
+
+  .about .section-subtitle{
+    margin-inline: 0;
+  }
+
+  .about-banner,
+  .about-banner .w-100{
+    margin-inline: auto 0;
+  }
+
+  .about-banner .w-100{
+    width: 40%;
+  }
+
+  .about-item{
+    text-align: center;
+  }
+
+  .about::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-image: url(../../imagens/about-abs-banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    z-index: -1;
+  }
+
+  
+
+}
