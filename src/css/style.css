@@ -103,9 +103,11 @@
     background-color: hsl(0, 0%, 70%);
   }
 
-/*-----------------------------------*\
-  #REUSED STYLE
-\*-----------------------------------*/
+
+/*
+Estilos 
+Gerais
+*/
 
 .container{
   padding-inline: 16px;
@@ -250,9 +252,9 @@
   width: 100%;
 }
 
-/*-----------------------------------*\
-  #HEADER
-\*-----------------------------------*/
+/*
+Header
+*/
 
 .header .btn{
   display: none;
@@ -337,9 +339,9 @@
   color: var(--cor-1);
 }
 
-/*-----------------------------------*\
-  #HERO
-\*-----------------------------------*/
+/*
+Hero
+*/
 
 .hero{
   position: relative;
@@ -379,9 +381,9 @@
   z-index: -1;
 }
 
-/*-----------------------------------*\
-  #SERVICE
-\*-----------------------------------*/
+/*
+Serviços
+*/
 
 .service-banner{
   display: none;
@@ -411,9 +413,9 @@
   margin-inline: auto;
 }
 
-/*-----------------------------------*\
-  #ABOUT
-\*-----------------------------------*/
+/*
+Sobre nós
+*/
 
 .about{
   background-color: var(--cor-2);
@@ -456,9 +458,9 @@
   line-height: 1.1;
 }
 
-/*-----------------------------------*\
-  #FOOTER
-\*-----------------------------------*/
+/*
+Footer
+*/
 
 .footer{
   color: var(--cor-5);
@@ -539,11 +541,12 @@
   font-size: var(--fs-6);
 }
 
-/*-----------------------------------*\
-  #MEDIA QUERIES
-\*-----------------------------------*/
+/*
+Media
+Queries
+*/
 
-@media (min-width: 575px){
+@media (min-width: 575px){ /* Celulares */
 
   :root{
     --fs-2: 4rem;
@@ -622,7 +625,7 @@
 
 }
 
-@media (min-width: 768px){
+@media (min-width: 768px){ /* Tablets */
 
   :root{
     --fs-1: 4rem;
@@ -698,7 +701,7 @@
   }
 }
 
-@media (min-width: 992px){
+@media (min-width: 992px){ /* Desktop Telas menores */
 
     :root{
       
@@ -849,7 +852,7 @@
 
 }
 
-@media (min-width: 1280px){
+@media (min-width: 1280px){ /* Desktops */
 
   :root{
     --fs-2: 5rem;
@@ -933,7 +936,7 @@
   }
 }
 
-@media (min-width: 1400px){
+@media (min-width: 1400px){ /* Desktops e TV */
   
   :root{
     --fs-2: 6rem;

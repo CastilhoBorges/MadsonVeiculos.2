@@ -1,4 +1,8 @@
-'use strict';
+'use strict'; 
+
+/*
+Script para o Menu hamburguer
+*/ 
 
 const navbar = document.querySelector("[data-navbar]");
 const navToggler = document.querySelector("[data-nav-toggler]");
