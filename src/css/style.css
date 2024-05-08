@@ -675,7 +675,7 @@ Queries
     top: 0;
     left: -25%;
     margin-inline-start: 15%;
-    width: 150%;
+    width: 120%;
     transform-origin: top;
   }
 
@@ -797,8 +797,9 @@ Queries
   }
 
   .service-banner img{
-    left: -55%;
-    margin-block-start: -30%;
+    left: -65%;
+    bottom: 20%;
+    margin-block-start: -50%;
     width: 190%;
   }
 
@@ -923,7 +924,10 @@ Queries
   }
 
   .service-banner img{
-    width: max-content;
+    left: -60%;
+    bottom: 20%;
+    margin-block-start: -50%;
+    width: 190%;
   }
 
   .footer-top{
