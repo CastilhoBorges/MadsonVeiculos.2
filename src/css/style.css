@@ -930,6 +930,11 @@ Queries
     width: 190%;
   }
 
+  #servicebtn{
+    display: none;
+  }
+ 
+
   .footer-top{
     padding-block: 150px;
   }
@@ -968,6 +973,10 @@ Queries
   .hero-banner img{
     width: 60%;
   }
+
+ #servicebtn{
+   display: none;
+ }
 
   .about::before{
     width: 55%;
