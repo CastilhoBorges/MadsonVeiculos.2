@@ -375,9 +375,10 @@ Hero
 
 .hero-banner img{
   position: absolute;
+  top: 60%;
   bottom: 0;
   right: 0;
-  width: 90%;
+  width: 130%;
   z-index: -1;
 }
 
@@ -546,6 +547,12 @@ Media
 Queries
 */
 
+@media (min-width: 450px) {
+  .hero-banner img{
+    width: 100%;
+  }
+}
+
 @media (min-width: 575px){ /* Celulares */
 
   :root{
@@ -585,6 +592,10 @@ Queries
 
   .hero .section-text{
     font-size: 1.8rem;
+  }
+
+  .hero-banner img{
+    width: 100%;
   }
 
   .service .section-title{
@@ -657,6 +668,10 @@ Queries
     padding: 120px;
   }
 
+  .hero-banner img{
+    width: 100%;
+  }
+
   .hero .section-text{
     margin-block-end: 30px;
   }
@@ -675,7 +690,7 @@ Queries
     top: 0;
     left: -25%;
     margin-inline-start: 15%;
-    width: 120%;
+    width: 130%;
     transform-origin: top;
   }
 
@@ -698,6 +713,12 @@ Queries
 
   .copyright{
     font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 885px){
+  .hero-banner img{
+    width: 90%;
   }
 }
 
@@ -775,7 +796,7 @@ Queries
   }
 
   .hero-banner img{
-    width: 70%;
+    width: 80%;
   }
 
   .service-card .card-text{
@@ -896,7 +917,7 @@ Queries
   }
 
   .hero-banner img{
-    width: 80%;
+    width: 60%;
   }
 
   .service .section-title{
@@ -971,7 +992,7 @@ Queries
   }
 
   .hero-banner img{
-    width: 60%;
+    width: 50%;
   }
 
  #servicebtn{
@@ -986,4 +1007,16 @@ Queries
     width: 50%;
   }
 
+}
+
+@media (min-width: 1600px){
+  .hero-banner img{
+    width: 50%;
+  }
+}
+
+@media (min-width: 1600px){
+  .hero-banner img{
+    width: 40%;
+  }
 }
